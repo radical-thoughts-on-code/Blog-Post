@@ -1,0 +1,16 @@
+<%- include('partials/header') -%>
+
+<h1><%= header %> </h1>
+<p><%= content %> </p>
+
+<div class="wrapper">
+    <%for(let i = 0; i < newPosts.length; i++){ %>
+    <div class="post-wrap">
+        <h2 class="post-title"><%= newPosts[i].postTitle %></h2>
+        <p class="post-content"> <%=newPosts[i].postMessage%> </p>
+    </div>
+    <%}%>
+</div>
+
+
+<%- include('partials/footer') -%>

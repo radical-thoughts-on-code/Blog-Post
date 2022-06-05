@@ -1,0 +1,130 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    height: 100vh; /* No posibility of overflow as grid-area main is set to fit content with css Grid*/
+    display: grid;
+    grid-template-rows: .1fr auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    align-items: space-between;
+    gap: 1em 0;
+}
+
+a.navbar-brand{
+    font-weight: 600;
+}
+section.section{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+main > h1{
+    font-size: 3rem;
+}
+
+/* *************************
+POSTS
+**************************** */
+div.wrapper{
+    padding: 1em 0;
+    border-radius: 4px;
+}
+
+div.post-wrap{
+    margin-bottom: 2.5em;
+}
+
+div.post-wrap:last-child{
+    margin-bottom: 0;
+}
+
+h2.post-title{
+    font-size: 1.3rem;
+    color: #4CAF50;
+    margin: 0;
+    margin-bottom: .4em;
+    position: relative;
+}
+
+p.post-content{
+    font-size: 1rem;
+    color: rgba(20, 19, 19, 0.849);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/*********************************
+FORM 
+**********************************/
+form.form{
+    display: grid;
+    gap: 1.5em 0;
+    margin-top: 1.5em;
+    width: 95%;
+    max-width: 500px;
+}
+
+form div{
+    display: grid;
+    gap: .2em;
+}
+
+
+form button{
+    justify-self: start;
+    margin-top: 1em;
+}
+
+::placeholder{
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+input,
+textarea{
+    margin-bottom: 5em;
+    padding: .4em .6em;
+    border: 1px solid gray;
+}
+
+/* *****************************************
+FOOTER
+****************************************** */
+
+footer{
+    grid-area: footer;
+    align-self: end;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+}
+
+footer p{
+    margin: 0;
+    opacity: 0.7;
+  
+}
+
+/************************************************
+MODIFIERS 
+*************************************************/
+.width{
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pd-top-bottom{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
