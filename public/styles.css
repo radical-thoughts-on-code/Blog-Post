@@ -10,13 +10,31 @@ body {
     "header"
     "main"
     "footer";
-    align-items: space-between;
     gap: 1em 0;
+
 }
 
-a.navbar-brand{
-    font-weight: 600;
+.post-header{
 }
+
+/* ********************************
+TYPOGRAPHY
+******************************** */
+a.navbar-brand{
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+li.nav-item > a.nav-link{
+    letter-spacing: 2px;
+    font-size: small;
+}
+
+li.nav-item > a.nav-link:hover,
+li.nav-item > a.nav-link:focus{
+    color: #4CAF50;
+}
+
 section.section{
     grid-area: header;
 }
@@ -26,7 +44,7 @@ main{
 }
 
 main > h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 /* *************************
@@ -38,7 +56,7 @@ div.wrapper{
 }
 
 div.post-wrap{
-    margin-bottom: 2.5em;
+    margin-bottom: 1.2em;
 }
 
 div.post-wrap:last-child{
@@ -46,18 +64,31 @@ div.post-wrap:last-child{
 }
 
 h2.post-title{
-    font-size: 1.3rem;
-    color: #4CAF50;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0;
-    margin-bottom: .4em;
+    margin-bottom: .3em;
     position: relative;
 }
 
 p.post-content{
-    font-size: 1rem;
-    color: rgba(20, 19, 19, 0.849);
-    font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.5;
+    text-decoration: none;
+    color: black;
+}
+
+p.post-content > a{
+    text-decoration: none;
+    font-size: small;
+}
+
+p.post-content > a:hover,
+p.post-content >a:focus{
+    text-decoration: underline;
+}
+
+p.post-content > a:visited{
+    color: #4CAF50;
 }
 
 /*********************************
@@ -67,19 +98,20 @@ form.form{
     display: grid;
     gap: 1.5em 0;
     margin-top: 1.5em;
-    width: 95%;
-    max-width: 500px;
+    margin-left: 0;
+}
+
+form > div > label{
+    font-weight: 700;
 }
 
 form div{
     display: grid;
-    gap: .2em;
 }
-
 
 form button{
     justify-self: start;
-    margin-top: 1em;
+    margin-top: .4em;
 }
 
 ::placeholder{
@@ -91,8 +123,23 @@ input,
 textarea{
     margin-bottom: 5em;
     padding: .4em .6em;
-    border: 1px solid gray;
+    border: 1.4px solid rgb(73, 73, 73);
 }
+
+textarea#Post-msg{
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
+/* ****************************
+POSTS
+****************************** */
+
+h1.post-header{
+    color: red;
+}
+
 
 /* *****************************************
 FOOTER
@@ -104,8 +151,8 @@ footer{
     display: grid;
     place-content: center;
     color: #fff;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-size: 12px;
 }
 
@@ -120,7 +167,7 @@ MODIFIERS
 *************************************************/
 .width{
     width: 95%;
-    max-width: 800px;
+    max-width: 950px;
     margin: 0 auto;
 }
 

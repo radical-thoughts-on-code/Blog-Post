@@ -3,13 +3,19 @@
 <h1><%= header %> </h1>
 <p><%= content %> </p>
 
-<div class="wrapper">
-    <%for(let i = 0; i < newPosts.length; i++){ %>
-    <div class="post-wrap">
-        <h2 class="post-title"><%= newPosts[i].postTitle %></h2>
-        <p class="post-content"> <%=newPosts[i].postMessage%> </p>
-    </div>
-    <%}%>
+<div class="wrapper">  
+
+    <% newPosts.forEach(post =>{%>
+        <div class="post-wrap">
+            <h2 class="post-title"><%= post.title %></h2>
+            <p class="post-content"> 
+                <%=((post.message).substring(0, 110))%>
+                <a href='/posts/<%= post.title %>'>
+                    Read More 
+                </a>
+            </p>
+        </div>
+    <% })%>
 </div>
 
 
